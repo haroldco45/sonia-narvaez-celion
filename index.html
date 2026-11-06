@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Sonia Narváez · Celion — Bienestar en Caucasia</title>
+<meta name="description" content="Productos Celion con Sonia Narváez, distribuidora independiente en Caucasia. Reto DNA, SOS12, Muno T, NeuroCell, Cellergy Boost, Celion Power y R3Shake. Pide por WhatsApp 313 741 5053.">
+<meta name="theme-color" content="#F26A1B">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="img/icon-192.png">
+<link rel="apple-touch-icon" href="img/icon-192.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sonia Narváez · Celion — Cuida tu salud, mejora tu vida">
+<meta property="og:description" content="Reto DNA, SOS12, Muno T, NeuroCell y más. Pide por WhatsApp 313 741 5053.">
+<meta property="og:image" content="https://sonia-narvaez-celion.netlify.app/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://sonia-narvaez-celion.netlify.app/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sonia-narvaez-celion.netlify.app/img/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--o:#F26A1B;--o2:#FF8A3D;--d:#1d1d1f;--g:#f6f1ec;--w:#fff;--pink:#E0245E}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,system-ui,sans-serif;color:var(--d);background:var(--w);overflow-x:hidden}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1100px;margin:auto;padding:0 18px}
+/* top bar */
+.top{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:10px 16px;background:rgba(242,106,27,.0);transition:.3s}
+.top.s{background:var(--o);box-shadow:0 4px 20px rgba(0,0,0,.15)}
+.brand{font-weight:900;color:#fff;font-size:20px;letter-spacing:-.5px;text-decoration:none}
+.brand small{display:block;font-weight:400;font-size:11px;letter-spacing:0;opacity:.9}
+.tb{display:flex;gap:8px}
+.chip{border:2px solid #fff;color:#fff;background:transparent;border-radius:30px;padding:6px 12px;font:600 13px Poppins;cursor:pointer}
+.chip.f{background:#fff;color:var(--o)}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#000}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(242,106,27,.35) 0%,rgba(0,0,0,.1) 40%,rgba(0,0,0,.85) 100%)}
+.hero .in{position:relative;z-index:2;padding:110px 18px 50px;max-width:1100px;margin:auto;width:100%}
+.hand{font-family:Caveat,cursive;font-size:clamp(34px,7vw,60px);line-height:1;color:#FFD3B5}
+.hero h1{font-size:clamp(40px,9vw,86px);font-weight:900;line-height:.95;letter-spacing:-2px;margin:8px 0 14px}
+.hero h1 span{color:var(--o2)}
+.hero p{max-width:560px;font-size:17px;opacity:.95}
+.cta{display:inline-block;margin-top:22px;background:var(--o);color:#fff;font-weight:800;padding:15px 26px;border-radius:40px;text-decoration:none;box-shadow:0 10px 30px rgba(242,106,27,.5);animation:pulse 2.2s infinite;border:0;cursor:pointer;font-size:16px;font-family:Poppins}
+.cta.alt{background:#fff;color:var(--o);box-shadow:none;animation:none;margin-left:8px}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+/* ticker */
+.tick{background:var(--d);color:#fff;overflow:hidden;white-space:nowrap;padding:12px 0;font-weight:800;text-transform:uppercase;letter-spacing:1px;font-size:14px}
+.tick div{display:inline-block;animation:mq 28s linear infinite}
+.tick b{color:var(--o2);margin:0 18px}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+section{padding:64px 0}
+.kick{color:var(--o);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:13px}
+h2{font-size:clamp(28px,5.5vw,46px);font-weight:900;letter-spacing:-1px;line-height:1.05;margin:6px 0 14px}
+.lead{max-width:680px;color:#555}
+/* hoy */
+.hoy{background:var(--g)}
+.hoyc{display:grid;grid-template-columns:1.1fr 1fr;gap:22px;align-items:center;background:#fff;border-radius:26px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.08)}
+.hoyc img{height:100%;object-fit:cover;max-height:520px;width:100%}
+.hoyc .t{padding:26px}
+.date{display:inline-block;background:var(--o);color:#fff;font-weight:700;border-radius:20px;padding:4px 12px;font-size:13px;margin-bottom:10px}
+/* products */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px;margin-top:26px}
+.card{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08);display:flex;flex-direction:column;transition:transform .3s}
+.card:hover{transform:translateY(-6px)}
+.card .ph{aspect-ratio:4/5;overflow:hidden;cursor:zoom-in;background:#eee}
+.card .ph img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .6s}
+.card:hover .ph img{transform:scale(1.06)}
+.card .b{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:20px;font-weight:900;letter-spacing:-.5px}
+.tag{font-size:12px;font-weight:700;color:var(--o);text-transform:uppercase;letter-spacing:1px}
+.card p{font-size:14px;color:#555;flex:1}
+.qty{display:flex;align-items:center;gap:10px;margin-top:6px}
+.qty button{width:40px;height:40px;border-radius:50%;border:2px solid var(--o);background:#fff;color:var(--o);font:800 20px Poppins;cursor:pointer}
+.qty button.add{flex:1;border-radius:30px;background:var(--o);color:#fff;font-size:15px;width:auto}
+.qty span{min-width:22px;text-align:center;font-weight:800}
+/* videos */
+.vids{background:var(--d);color:#fff}
+.vids .lead{color:#ccc}
+.vrow{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:20px 0 10px}
+.vrow::-webkit-scrollbar{height:6px}.vrow::-webkit-scrollbar-thumb{background:var(--o);border-radius:6px}
+.vc{flex:0 0 240px;scroll-snap-align:start;border-radius:18px;overflow:hidden;background:#000;position:relative}
+.vc video{aspect-ratio:9/16;object-fit:cover;width:100%}
+.vc .cap{position:absolute;left:0;right:0;bottom:0;padding:30px 12px 12px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-weight:700;font-size:14px;pointer-events:none}
+.vc .play{position:absolute;inset:0;border:0;background:transparent;cursor:pointer}
+/* sos12 band */
+.band{background:linear-gradient(120deg,var(--o),#ff9b54);color:#fff;border-radius:28px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.band .t{padding:34px}
+.band ul{list-style:none;margin:16px 0;display:grid;gap:8px}
+.band li{background:rgba(255,255,255,.18);border-radius:12px;padding:10px 14px;font-weight:600}
+.band img{width:100%;height:100%;object-fit:cover}
+.note{font-size:12px;opacity:.9;margin-top:10px}
+/* habits */
+.hab{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:24px}
+.hab div{border-left:5px solid var(--o);background:var(--g);border-radius:14px;padding:18px;font-weight:600}
+.hab b{display:block;font-size:34px;color:var(--o);font-weight:900;line-height:1}
+/* team */
+.team{position:relative;color:#fff;overflow:hidden;border-radius:28px;min-height:420px;display:flex;align-items:flex-end}
+.team img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.team:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.88),rgba(242,106,27,.25));z-index:1}
+.team .t{position:relative;z-index:2;padding:30px}
+/* contact */
+.who{display:grid;grid-template-columns:320px 1fr;gap:26px;align-items:center}
+.who img{border-radius:22px;box-shadow:0 20px 40px rgba(0,0,0,.15);transform:rotate(-2deg)}
+.big{font-size:clamp(30px,6vw,52px);font-weight:900;color:var(--o);letter-spacing:-1px}
+.disc{background:var(--g);font-size:13px;color:#666;padding:22px 0}
+footer{background:var(--d);color:#bbb;padding:28px 0 110px;font-size:13px;text-align:center}
+footer a{color:var(--o2);font-weight:700}
+/* cart */
+.cart{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;background:var(--d);color:#fff;border-radius:22px;padding:12px 14px;display:flex;align-items:center;gap:12px;box-shadow:0 12px 40px rgba(0,0,0,.35);transform:translateY(140%);transition:.35s}
+.cart.on{transform:none}
+.cart .c{flex:1;font-size:14px}
+.cart .c b{color:var(--o2);font-size:18px}
+.cart button{background:#25D366;color:#fff;border:0;border-radius:30px;padding:12px 18px;font:800 15px Poppins;cursor:pointer}
+.fab{position:fixed;right:16px;bottom:16px;z-index:55;background:#25D366;color:#fff;border-radius:30px;padding:13px 18px;font-weight:800;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+body.hascart .fab{display:none}
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:90;display:none;align-items:center;justify-content:center;padding:16px}
+.lb.on{display:flex}
+.lb img{max-height:92vh;border-radius:12px}
+.lb button{position:absolute;top:14px;right:14px}
+/* license */
+.lic{position:fixed;inset:0;z-index:100;background:var(--o);color:#fff;display:none;align-items:center;justify-content:center;text-align:center;padding:30px}
+.lic.on{display:flex}
+/* reveal */
+.rv{opacity:0;transform:translateY(30px);transition:1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(max-width:760px){.hoyc,.band,.who{grid-template-columns:1fr}.band img{max-height:420px}.who img{max-width:280px;margin:auto}.cta.alt{margin:10px 0 0}}
+</style>
+</head>
+<body>
+
+<header class="top" id="top">
+  <a href="#" class="brand">celion<small>con Sonia Narváez</small></a>
+  <div class="tb">
+    <button class="chip f" data-l="es">ES</button>
+    <button class="chip" data-l="en">EN</button>
+  </div>
+</header>
+
+<section class="hero" style="padding:0">
+  <video autoplay muted loop playsinline poster="media/kit-dna.jpg"><source src="media/kit-dna.mp4" type="video/mp4"></video>
+  <div class="in">
+    <div class="hand" data-i="h_hand">Cuida tu salud, mejora tu vida</div>
+    <h1><span data-i="h_t1">Tu bienestar,</span><br><span data-i="h_t2" style="color:#fff">nuestra misión.</span></h1>
+    <p data-i="h_p">Soy Sonia Narváez, distribuidora independiente de Celion. Te asesoro y te llevo tus productos de nutrición, belleza y bienestar.</p>
+    <a class="cta" href="#productos" data-i="h_c1">Ver productos</a>
+    <a class="cta alt" id="waHero" target="_blank" rel="noopener" data-i="h_c2">Escríbeme</a>
+  </div>
+</section>
+
+<div class="tick"><div id="tk"></div></div>
+
+<section class="hoy">
+  <div class="wrap">
+    <div class="kick" data-i="hoy_k">Hoy</div>
+    <div class="hoyc rv" style="margin-top:12px">
+      <img id="hoyImg" alt="">
+      <div class="t">
+        <span class="date" id="hoyDate"></span>
+        <h2 id="hoyT"></h2>
+        <p class="lead" id="hoyP"></p>
+        <div class="qty" style="max-width:320px;margin-top:16px"><button class="add" id="hoyAdd" data-i="add">Agregar al pedido</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="productos">
+  <div class="wrap">
+    <div class="kick" data-i="p_k">Nuestra línea completa</div>
+    <h2 data-i="p_t">Nutrición, belleza y bienestar en un solo lugar</h2>
+    <p class="lead" data-i="p_p">Arma tu pedido con los botones y envíalo a Sonia por WhatsApp. Ella te confirma precio, disponibilidad y entrega.</p>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="band rv">
+      <div class="t">
+        <div class="kick" style="color:#fff">SOS12 · 12 Days Rescue Kit</div>
+        <h2 data-i="s_t">Tu cuerpo en su mejor versión</h2>
+        <p data-i="s_p">Un protocolo de 12 días que combina cuatro productos y hábitos diarios.</p>
+        <ul>
+          <li>Celion TH — <span data-i="s1">apoyo al metabolismo</span></li>
+          <li>CBerberine+ — <span data-i="s2">control del apetito</span></li>
+          <li>R3Shake — <span data-i="s3">cena y almuerzo completos</span></li>
+          <li>Cellergy Boost — <span data-i="s4">energía para el día</span></li>
+        </ul>
+        <button class="cta" style="background:#fff;color:var(--o)" onclick="addItem('sos12')" data-i="s_c">Quiero el SOS12</button>
+        <p class="note" data-i="s_n">Los resultados varían según cada persona, su alimentación y su actividad física.</p>
+      </div>
+      <img src="img/sos12.jpg" alt="SOS12 Celion" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="vids">
+  <div class="wrap">
+    <div class="kick" data-i="v_k">Videos</div>
+    <h2 data-i="v_t">Conoce los productos en acción</h2>
+    <p class="lead" data-i="v_p">Toca un video para verlo con sonido.</p>
+    <div class="vrow" id="vrow"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kick" data-i="hb_k">Hábitos que suman</div>
+    <h2 data-i="hb_t">Cuida tu salud desde adentro hacia afuera</h2>
+    <div class="hab">
+      <div class="rv"><b>01</b><span data-i="hb1">Mantén una alimentación sana y equilibrada.</span></div>
+      <div class="rv"><b>02</b><span data-i="hb2">Acompaña tu rutina con una buena hidratación.</span></div>
+      <div class="rv"><b>03</b><span data-i="hb3">Mantén hábitos saludables y sé constante con tu rutina diaria.</span></div>
+      <div class="rv"><b>04</b><span data-i="hb4">Cuida tu salud desde adentro hacia afuera.</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="team rv">
+      <img src="media/power-dr-quiroz.jpg" alt="Familia Celion" loading="lazy">
+      <div class="t">
+        <div class="kick" style="color:#FFD3B5" data-i="t_k">¿Quieres hacer parte de nuestro equipo?</div>
+        <h2 data-i="t_t">Únete a la familia Celion</h2>
+        <p data-i="t_p">Genera ingresos, comparte bienestar y cumple tus metas. Sé parte de un proyecto de bienestar, salud y crecimiento.</p>
+        <a class="cta" id="waTeam" target="_blank" rel="noopener" data-i="t_c">Quiero saber más</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" style="padding-top:0">
+  <div class="wrap who">
+    <img src="img/volante.jpg" alt="Volante Sonia Narváez Celion" loading="lazy">
+    <div>
+      <div class="kick" data-i="c_k">¡Contáctame!</div>
+      <h2>Sonia Narváez</h2>
+      <p class="lead" data-i="c_p">Distribuidora independiente Celion. Caucasia, Antioquia. Te asesoro sin compromiso.</p>
+      <div class="big">313 741 5053</div>
+      <a class="cta" id="waC" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="cta alt" href="tel:+573137415053" data-i="c_call" style="border:2px solid var(--o)">Llamar</a>
+    </div>
+  </div>
+</section>
+
+<div class="disc"><div class="wrap" data-i="disc">Los productos Celion son suplementos dietarios / alimentarios, no son medicamentos y no reemplazan una alimentación balanceada ni un tratamiento médico. Si tienes una enfermedad, estás embarazada, lactando o tomas medicamentos, consulta a tu médico antes de usarlos. Sonia Narváez es distribuidora independiente; Celion es una marca registrada de su titular.</div></div>
+
+<footer>
+  <div class="wrap">
+    <div>Sonia Narváez · Celion · Caucasia, Antioquia</div>
+    <div style="margin-top:8px"><span data-i="f_by">App hecha por</span> <a href="https://vibraspositivashm.com" target="_blank" rel="noopener">Vibras Positivas HM</a> · ExpoCaucasia 2026</div>
+    <div style="margin-top:6px;opacity:.7"><span data-i="f_lic">Licencia vigente hasta</span> <span id="licTxt"></span></div>
+  </div>
+</footer>
+
+<a class="fab" id="fab" target="_blank" rel="noopener">WhatsApp</a>
+<div class="cart" id="cart"><div class="c"><span data-i="cart">Tu pedido</span>: <b id="cn">0</b> <span data-i="cart_u">productos</span><div id="cl" style="font-size:12px;opacity:.8"></div></div><button id="send" data-i="send">Enviar a Sonia</button></div>
+<div class="lb" id="lb"><img id="lbi" alt=""><button class="chip f" onclick="lb.classList.remove('on')">X</button></div>
+<div class="lic" id="lic"><div><h2 data-i="lic_t">Licencia vencida</h2><p data-i="lic_p">Para seguir usando esta app, renueva la licencia con Vibras Positivas HM.</p><a class="cta" style="background:#fff;color:var(--o)" href="https://wa.me/573117700431?text=Hola%20Harold%2C%20quiero%20renovar%20la%20app%20de%20Sonia%20Narv%C3%A1ez%20Celion" target="_blank" rel="noopener">Renovar</a></div></div>
+
+<script>
+const WA='573137415053';
+const LIC_END='2027-11-06'; // un año desde ExpoCaucasia (6 nov 2026)
+const P=[
+ {id:'dna',name:'Reto DNA Celion',img:'img/protocolo-dna.jpg',
+  tag:{es:'Kit de bienvenida · Protocolo DNA 3C',en:'Welcome kit · DNA 3C Protocol'},
+  d:{es:'El kit para empezar tu transformación: el protocolo DNA 3C con probiótico avanzado, Muno T, NeuroCell, Celion Power, Cellergy Boost y termo. Pregúntale a Sonia cómo arrancar.',en:'The kit to start your transformation: the DNA 3C protocol with advanced probiotic, Muno T, NeuroCell, Celion Power, Cellergy Boost and shaker. Ask Sonia how to begin.'}},
+ {id:'sos12',name:'SOS12',img:'img/sos12.jpg',
+  tag:{es:'12 Days Rescue Kit',en:'12 Days Rescue Kit'},
+  d:{es:'Protocolo de 12 días: Celion TH, CBerberine+, R3Shake y Cellergy Boost, con pulsera y guía de uso. Fácil de usar y seguir.',en:'12-day protocol: Celion TH, CBerberine+, R3Shake and Cellergy Boost, with wristband and guide. Easy to use and follow.'}},
+ {id:'munot',name:'Muno T',img:'img/muno-t.jpg',zoom:['img/muno-t-detox.jpg','img/muno-t-ingredientes.jpg'],
+  tag:{es:'Té herbal detox · sabor durazno',en:'Herbal detox tea · peach flavor'},
+  d:{es:'Infusión de hongos (Reishi, Chaga), cardo mariano, jengibre, manzanilla y hoja de malva. Hierves 1 litro, agregas la papeleta, reposas 2 horas y completas con 2 litros fríos.',en:'Infusion of mushrooms (Reishi, Chaga), milk thistle, ginger, chamomile and mallow. Boil 1 liter, add the sachet, steep 2 hours and top with 2 liters of cold water.'}},
+ {id:'neuro',name:'NeuroCell',img:'img/neurocell.jpg',zoom:['img/neurocell-ingredientes.jpg'],
+  tag:{es:'Nutrición para tu mente · fórmula USA',en:'Nutrition for your mind · USA formula'},
+  d:{es:'Espirulina, cacao orgánico, coco MCT, enzimas, probióticos y vitaminas del complejo B, C, D3, E y K. Se toma todos los días en la mañana.',en:'Spirulina, organic cacao, MCT coconut, enzymes, probiotics and vitamins B, C, D3, E and K. Take it every morning.'}},
+ {id:'boost',name:'Cellergy Boost',img:'img/cellergy-boost.jpg',
+  tag:{es:'Energía · sabor frutos rojos',en:'Energy · red berries flavor'},
+  d:{es:'Proteína de colágeno hidrolizado, L-arginina, beta alanina, astaxantina, resveratrol, guaraná y vitaminas C, B3 y D3. Non GMO.',en:'Hydrolyzed collagen protein, L-arginine, beta-alanine, astaxanthin, resveratrol, guarana and vitamins C, B3 and D3. Non-GMO.'}},
+ {id:'power',name:'Celion Power',img:'img/celion-power.jpg',
+  tag:{es:'+240 compuestos bioactivos',en:'240+ bioactive compounds'},
+  d:{es:'Superalimentos, antioxidantes, aminoácidos, enzimas digestivas y probióticos en una sola fórmula. 4000 mg de capacidad ORAC por porción.',en:'Superfoods, antioxidants, amino acids, digestive enzymes and probiotics in one formula. 4000 mg ORAC per serving.'}},
+ {id:'r3',name:'R3Shake',img:'img/r3shake.jpg',
+  tag:{es:'25 g de proteína por porción',en:'25 g protein per serving'},
+  d:{es:'Batido con 60 nutrientes esenciales, 12 extractos vegetales, 36 vitaminas y minerales, prebióticos y probióticos. Sabor chocolate y fruto del monje.',en:'Shake with 60 essential nutrients, 12 plant extracts, 36 vitamins and minerals, prebiotics and probiotics. Chocolate and monk fruit flavor.'}},
+ {id:'cellagen',name:'Cellagen Collagen',img:'media/cellagen.jpg',
+  tag:{es:'Colágeno · belleza',en:'Collagen · beauty'},
+  d:{es:'El colágeno de la línea Celion para tu rutina de belleza y bienestar. Mira el video y pregúntale a Sonia.',en:'Celion line collagen for your beauty and wellness routine. Watch the video and ask Sonia.'}}
+];
+const V=[
+ {s:'media/kit-dna',c:{es:'Así llega tu kit Celion',en:'How your Celion kit arrives'}},
+ {s:'media/neurocell',c:{es:'Preparando NeuroCell',en:'Preparing NeuroCell'}},
+ {s:'media/power-dr-quiroz',c:{es:'Dr. Daniel Quiroz · Celion Power',en:'Dr. Daniel Quiroz · Celion Power'}},
+ {s:'media/munot-dr-quiroz',c:{es:'Dr. Daniel Quiroz · Muno T',en:'Dr. Daniel Quiroz · Muno T'}},
+ {s:'media/cellagen',c:{es:'Cómo tomar Cellagen',en:'How to take Cellagen'}}
+];
+const T={
+ es:{},
+ en:{h_hand:'Take care of your health, improve your life',h_t1:'Your wellbeing,',h_t2:'our mission.',h_p:"I'm Sonia Narváez, an independent Celion distributor. I'll advise you and deliver your nutrition, beauty and wellness products.",h_c1:'See products',h_c2:'Message me',hoy_k:'Today',add:'Add to order',p_k:'Our full line',p_t:'Nutrition, beauty and wellness in one place',p_p:'Build your order with the buttons and send it to Sonia on WhatsApp. She will confirm price, availability and delivery.',s_t:'Your body at its best',s_p:'A 12-day protocol combining four products and daily habits.',s1:'metabolism support',s2:'appetite control',s3:'complete dinner and lunch',s4:'energy for the day',s_c:'I want SOS12',s_n:'Results vary for each person, depending on diet and physical activity.',v_k:'Videos',v_t:'See the products in action',v_p:'Tap a video to watch it with sound.',hb_k:'Habits that add up',hb_t:'Take care of your health from the inside out',hb1:'Keep a healthy, balanced diet.',hb2:'Support your routine with good hydration.',hb3:'Keep healthy habits and stay consistent every day.',hb4:'Care for your health from the inside out.',t_k:'Want to join our team?',t_t:'Join the Celion family',t_p:'Earn income, share wellbeing and reach your goals. Be part of a project of wellness, health and growth.',t_c:'Tell me more',c_k:'Contact me!',c_p:'Independent Celion distributor. Caucasia, Antioquia. Free advice, no commitment.',c_call:'Call',disc:'Celion products are dietary supplements, not medicines, and do not replace a balanced diet or medical treatment. If you have a medical condition, are pregnant, breastfeeding or take medication, ask your doctor before using them. Sonia Narváez is an independent distributor; Celion is a registered trademark of its owner.',f_by:'App made by',f_lic:'License valid until',cart:'Your order',cart_u:'products',send:'Send to Sonia',lic_t:'License expired',lic_p:'To keep using this app, renew the license with Vibras Positivas HM.'}
+};
+let L=localStorage.getItem('sn_lang')||'es';
+const cart={};
+const $=s=>document.querySelector(s);
+const ES={};document.querySelectorAll('[data-i]').forEach(e=>ES[e.dataset.i]=e.textContent);
+function bogota(){return new Date(new Date().toLocaleString('en-US',{timeZone:'America/Bogota'}))}
+function wa(t){return 'https://wa.me/'+WA+'?text='+encodeURIComponent(t)}
+function apply(){
+ document.documentElement.lang=L;
+ document.querySelectorAll('[data-i]').forEach(e=>{const k=e.dataset.i;e.textContent=L==='es'?ES[k]:(T.en[k]||ES[k])});
+ document.querySelectorAll('[data-l]').forEach(b=>b.classList.toggle('f',b.dataset.l===L));
+ const hi=L==='es'?'Hola Sonia, vi tu app de Celion y quiero información.':'Hi Sonia, I saw your Celion app and I would like information.';
+ ['#waHero','#waC','#fab'].forEach(s=>$(s).href=wa(hi));
+ $('#waTeam').href=wa(L==='es'?'Hola Sonia, quiero saber cómo hacer parte del equipo Celion.':'Hi Sonia, I want to know how to join the Celion team.');
+ grid();vids();hoy();tick();drawCart();
+ $('#licTxt').textContent=new Date(LIC_END+'T12:00:00-05:00').toLocaleDateString(L==='es'?'es-CO':'en-US',{day:'numeric',month:'long',year:'numeric',timeZone:'America/Bogota'});
+}
+function grid(){
+ $('#grid').innerHTML=P.map(p=>`<article class="card rv"><div class="ph" onclick="zoom('${p.id}')"><img src="${p.img}" alt="${p.name}" loading="lazy"></div><div class="b"><div class="tag">${p.tag[L]}</div><h3>${p.name}</h3><p>${p.d[L]}</p><div class="qty"><button onclick="sub('${p.id}')">−</button><span id="q_${p.id}">${cart[p.id]||0}</span><button onclick="addItem('${p.id}')">+</button><button class="add" onclick="addItem('${p.id}')">${L==='es'?'Agregar':'Add'}</button></div></div></article>`).join('');
+ observe();
+}
+function vids(){
+ $('#vrow').innerHTML=V.map(v=>`<div class="vc"><video muted loop playsinline preload="none" poster="${v.s}.jpg"><source src="${v.s}.mp4" type="video/mp4"></video><div class="cap">${v.c[L]}</div><button class="play" aria-label="play"></button></div>`).join('');
+ document.querySelectorAll('.vc').forEach(c=>{const v=c.querySelector('video');c.querySelector('.play').onclick=()=>{document.querySelectorAll('.vc video').forEach(o=>{if(o!==v){o.muted=true}});if(v.muted||v.paused){v.muted=false;v.play()}else{v.pause()}};});
+ const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){v.play().catch(()=>{})}else{v.pause()}}),{threshold:.6});
+ document.querySelectorAll('.vc video').forEach(v=>io.observe(v));
+}
+function hoy(){
+ const d=bogota();const start=new Date(d.getFullYear(),0,0);const n=Math.floor((d-start)/864e5);
+ const p=P[n%(P.length-1)];
+ $('#hoyImg').src=p.img;$('#hoyImg').alt=p.name;
+ $('#hoyDate').textContent=d.toLocaleDateString(L==='es'?'es-CO':'en-US',{weekday:'long',day:'numeric',month:'long'})+' · '+d.toLocaleTimeString(L==='es'?'es-CO':'en-US',{hour:'2-digit',minute:'2-digit'});
+ $('#hoyT').textContent=(L==='es'?'El producto del día: ':'Product of the day: ')+p.name;
+ $('#hoyP').textContent=p.d[L];
+ $('#hoyAdd').onclick=()=>addItem(p.id);
+}
+function tick(){
+ const w=L==='es'?['Reto DNA','SOS12 · 12 días','Muno T detox','NeuroCell','Cellergy Boost','Celion Power','R3Shake','Pide por WhatsApp 313 741 5053']:['DNA Challenge','SOS12 · 12 days','Muno T detox','NeuroCell','Cellergy Boost','Celion Power','R3Shake','Order on WhatsApp 313 741 5053'];
+ const s=w.map(x=>x+'<b>·</b>').join('');$('#tk').innerHTML=s+s;
+}
+function addItem(id){cart[id]=(cart[id]||0)+1;drawCart();navigator.vibrate&&navigator.vibrate(20)}
+function sub(id){if(cart[id]){cart[id]--;if(!cart[id])delete cart[id]}drawCart()}
+function drawCart(){
+ let n=0;const ls=[];for(const id in cart){n+=cart[id];const p=P.find(x=>x.id===id);ls.push(cart[id]+' x '+p.name);const q=$('#q_'+id);if(q)q.textContent=cart[id]}
+ P.forEach(p=>{if(!cart[p.id]){const q=$('#q_'+p.id);if(q)q.textContent=0}});
+ $('#cn').textContent=n;$('#cl').textContent=ls.join(' · ');
+ $('#cart').classList.toggle('on',n>0);document.body.classList.toggle('hascart',n>0);
+}
+$('#send').onclick=()=>{
+ const ls=Object.keys(cart).map(id=>'- '+cart[id]+' x '+P.find(x=>x.id===id).name).join('\n');
+ const t=(L==='es'?'Hola Sonia, quiero hacer este pedido de Celion:\n':'Hi Sonia, I would like to order these Celion products:\n')+ls+(L==='es'?'\n\n¿Me confirmas precio y entrega? Gracias.':'\n\nCould you confirm price and delivery? Thank you.');
+ window.open(wa(t),'_blank');
+};
+const lb=$('#lb');let zl=[],zi=0;
+function zoom(id){const p=P.find(x=>x.id===id);zl=[p.img].concat(p.zoom||[]);zi=0;$('#lbi').src=zl[0];lb.classList.add('on')}
+$('#lbi').onclick=e=>{e.stopPropagation();if(zl.length>1){zi=(zi+1)%zl.length;$('#lbi').src=zl[zi]}};
+lb.onclick=()=>lb.classList.remove('on');
+function observe(){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.rv:not(.in)').forEach(x=>io.observe(x))}
+document.querySelectorAll('[data-l]').forEach(b=>b.onclick=()=>{L=b.dataset.l;localStorage.setItem('sn_lang',L);apply()});
+addEventListener('scroll',()=>$('#top').classList.toggle('s',scrollY>60),{passive:true});
+if(new Date()>new Date(LIC_END+'T23:59:59-05:00'))$('#lic').classList.add('on');
+apply();observe();
+setInterval(hoy,60000);
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js');
+</script>
+</body>
+</html>
