@@ -118,6 +118,16 @@ footer a{color:var(--o2);font-weight:700}
 .cart button{background:#25D366;color:#fff;border:0;border-radius:30px;padding:12px 18px;font:800 15px Poppins;cursor:pointer}
 .fab{position:fixed;right:16px;bottom:16px;z-index:55;background:#25D366;color:#fff;border-radius:30px;padding:13px 18px;font-weight:800;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.3)}
 body.hascart .fab{display:none}
+.sel{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.sel button{border:2px solid var(--o);background:#fff;color:var(--o);border-radius:30px;padding:8px 14px;font:700 14px Poppins;cursor:pointer}
+.sel button.on{background:var(--o);color:#fff}
+.cart{flex-wrap:wrap}.cart .sel{margin:0;width:100%;order:-1;align-items:center}.cart .sel:before{content:attr(data-t);font-size:12px;opacity:.8;margin-right:4px}.cart .sel button{padding:5px 10px;font-size:12px;border-color:#fff;background:transparent;color:#fff}.cart .sel button.on{background:#fff;color:var(--d)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.duo>div{background:var(--g);border-radius:18px;padding:16px}
+.duo h3{font-size:20px;font-weight:900}.duo small{color:#777;font-weight:600}
+.duo .big{font-size:clamp(22px,4vw,32px)}
+.duo .cta{padding:10px 16px;font-size:14px;margin-top:10px;animation:none}
+@media(max-width:520px){.duo{grid-template-columns:1fr}}
 /* lightbox */
 .lb{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:90;display:none;align-items:center;justify-content:center;padding:16px}
 .lb.on{display:flex}
@@ -135,7 +145,7 @@ body.hascart .fab{display:none}
 <body>
 
 <header class="top" id="top">
-  <a href="#" class="brand">celion<small>con Sonia Narváez</small></a>
+  <a href="#" class="brand">celion<small>con Sonia Narváez y Tatiana Vega</small></a>
   <div class="tb">
     <button class="chip f" data-l="es">ES</button>
     <button class="chip" data-l="en">EN</button>
@@ -149,7 +159,7 @@ body.hascart .fab{display:none}
     <h1><span data-i="h_t1">Tu bienestar,</span><br><span data-i="h_t2" style="color:#fff">nuestra misión.</span></h1>
     <p data-i="h_p">Soy Sonia Narváez, distribuidora independiente de Celion. Te asesoro y te llevo tus productos de nutrición, belleza y bienestar.</p>
     <a class="cta" href="#productos" data-i="h_c1">Ver productos</a>
-    <a class="cta alt" id="waHero" target="_blank" rel="noopener" data-i="h_c2">Escríbeme</a>
+    <a class="cta alt" id="waHero" target="_blank" rel="noopener" data-i="h_c2">Escríbenos</a>
   </div>
 </section>
 
@@ -174,7 +184,7 @@ body.hascart .fab{display:none}
   <div class="wrap">
     <div class="kick" data-i="p_k">Nuestra línea completa</div>
     <h2 data-i="p_t">Nutrición, belleza y bienestar en un solo lugar</h2>
-    <p class="lead" data-i="p_p">Arma tu pedido con los botones y envíalo a Sonia por WhatsApp. Ella te confirma precio, disponibilidad y entrega.</p>
+    <p class="lead" data-i="p_p">Arma tu pedido con los botones y envíalo por WhatsApp a Sonia o a su hija Tatiana. Te confirman precio, disponibilidad y entrega.</p>
     <div class="grid" id="grid"></div>
   </div>
 </section>
@@ -240,38 +250,44 @@ body.hascart .fab{display:none}
   <div class="wrap who">
     <img src="img/volante.jpg" alt="Volante Sonia Narváez Celion" loading="lazy">
     <div>
-      <div class="kick" data-i="c_k">¡Contáctame!</div>
-      <h2>Sonia Narváez</h2>
-      <p class="lead" data-i="c_p">Distribuidora independiente Celion. Caucasia, Antioquia. Te asesoro sin compromiso.</p>
-      <div class="big">313 741 5053</div>
-      <a class="cta" id="waC" target="_blank" rel="noopener">WhatsApp</a>
-      <a class="cta alt" href="tel:+573137415053" data-i="c_call" style="border:2px solid var(--o)">Llamar</a>
+      <div class="kick" data-i="c_k">¡Contáctanos!</div>
+      <h2 data-i="c_t">Sonia y Tatiana</h2>
+      <p class="lead" data-i="c_p">Distribuidoras independientes Celion. Caucasia, Antioquia. Te asesoramos sin compromiso; escríbele a la que prefieras.</p>
+      <div class="duo" id="duo"></div>
     </div>
   </div>
 </section>
 
-<div class="disc"><div class="wrap" data-i="disc">Los productos Celion son suplementos dietarios / alimentarios, no son medicamentos y no reemplazan una alimentación balanceada ni un tratamiento médico. Si tienes una enfermedad, estás embarazada, lactando o tomas medicamentos, consulta a tu médico antes de usarlos. Sonia Narváez es distribuidora independiente; Celion es una marca registrada de su titular.</div></div>
+<div class="disc"><div class="wrap" data-i="disc">Los productos Celion son suplementos dietarios / alimentarios, no son medicamentos y no reemplazan una alimentación balanceada ni un tratamiento médico. Si tienes una enfermedad, estás embarazada, lactando o tomas medicamentos, consulta a tu médico antes de usarlos. Sonia Narváez y Tatiana Vega son distribuidoras independientes; Celion es una marca registrada de su titular.</div></div>
 
 <footer>
   <div class="wrap">
-    <div>Sonia Narváez · Celion · Caucasia, Antioquia</div>
+    <div>Sonia Narváez · Tatiana Vega · Celion · Caucasia, Antioquia</div>
     <div style="margin-top:8px"><span data-i="f_by">App hecha por</span> <a href="https://vibraspositivashm.com" target="_blank" rel="noopener">Vibras Positivas HM</a> · ExpoCaucasia 2026</div>
     <div style="margin-top:6px;opacity:.7"><span data-i="f_lic">Licencia vigente hasta</span> <span id="licTxt"></span></div>
   </div>
 </footer>
 
 <a class="fab" id="fab" target="_blank" rel="noopener">WhatsApp</a>
-<div class="cart" id="cart"><div class="c"><span data-i="cart">Tu pedido</span>: <b id="cn">0</b> <span data-i="cart_u">productos</span><div id="cl" style="font-size:12px;opacity:.8"></div></div><button id="send" data-i="send">Enviar a Sonia</button></div>
+<div class="cart" id="cart"><div class="c"><span data-i="cart">Tu pedido</span>: <b id="cn">0</b> <span data-i="cart_u">productos</span><div id="cl" style="font-size:12px;opacity:.8"></div></div><div class="sel" id="selCart"></div><button id="send"></button></div>
 <div class="lb" id="lb"><img id="lbi" alt=""><button class="chip f" onclick="lb.classList.remove('on')">X</button></div>
 <div class="lic" id="lic"><div><h2 data-i="lic_t">Licencia vencida</h2><p data-i="lic_p">Para seguir usando esta app, renueva la licencia con Vibras Positivas HM.</p><a class="cta" style="background:#fff;color:var(--o)" href="https://wa.me/573117700431?text=Hola%20Harold%2C%20quiero%20renovar%20la%20app%20de%20Sonia%20Narv%C3%A1ez%20Celion" target="_blank" rel="noopener">Renovar</a></div></div>
 
 <script>
-const WA='573137415053';
+const SELL={
+ sonia:{n:'Sonia Narváez',f:'Sonia',wa:'573137415053',tel:'313 741 5053',r:{es:'Distribuidora Celion',en:'Celion distributor'}},
+ tatiana:{n:'Tatiana Vega',f:'Tatiana',wa:'573233209059',tel:'323 320 9059',r:{es:'Distribuidora Celion · hija de Sonia',en:"Celion distributor · Sonia's daughter"}}
+};
+// ?v=tatiana en el enlace deja a Tatiana como vendedora por defecto
+let SV=(new URLSearchParams(location.search).get('v')||'').toLowerCase();
+if(!SELL[SV]){try{SV=localStorage.getItem('sn_vend')}catch(e){}} if(!SELL[SV])SV='sonia';
+try{localStorage.setItem('sn_vend',SV)}catch(e){}
+function setV(k){SV=k;try{localStorage.setItem('sn_vend',k)}catch(e){}apply()}
 const LIC_END='2027-05-06'; // 6 meses desde ExpoCaucasia (6 nov 2026)
 const P=[
  {id:'dna',name:'Reto DNA Celion',img:'img/protocolo-dna.jpg',
   tag:{es:'Kit de bienvenida · Protocolo DNA 3C',en:'Welcome kit · DNA 3C Protocol'},
-  d:{es:'El kit para empezar tu transformación: el protocolo DNA 3C con probiótico avanzado, Muno T, NeuroCell, Celion Power, Cellergy Boost y termo. Pregúntale a Sonia cómo arrancar.',en:'The kit to start your transformation: the DNA 3C protocol with advanced probiotic, Muno T, NeuroCell, Celion Power, Cellergy Boost and shaker. Ask Sonia how to begin.'}},
+  d:{es:'El kit para empezar tu transformación: el protocolo DNA 3C con probiótico avanzado, Muno T, NeuroCell, Celion Power, Cellergy Boost y termo. Pregúntanos cómo arrancar.',en:'The kit to start your transformation: the DNA 3C protocol with advanced probiotic, Muno T, NeuroCell, Celion Power, Cellergy Boost and shaker. Ask us how to begin.'}},
  {id:'sos12',name:'SOS12',img:'img/sos12.jpg',
   tag:{es:'12 Days Rescue Kit',en:'12 Days Rescue Kit'},
   d:{es:'Protocolo de 12 días: Celion TH, CBerberine+, R3Shake y Cellergy Boost, con pulsera y guía de uso. Fácil de usar y seguir.',en:'12-day protocol: Celion TH, CBerberine+, R3Shake and Cellergy Boost, with wristband and guide. Easy to use and follow.'}},
@@ -292,7 +308,7 @@ const P=[
   d:{es:'Batido con 60 nutrientes esenciales, 12 extractos vegetales, 36 vitaminas y minerales, prebióticos y probióticos. Sabor chocolate y fruto del monje.',en:'Shake with 60 essential nutrients, 12 plant extracts, 36 vitamins and minerals, prebiotics and probiotics. Chocolate and monk fruit flavor.'}},
  {id:'cellagen',name:'Cellagen Collagen',img:'media/cellagen.jpg',
   tag:{es:'Colágeno · belleza',en:'Collagen · beauty'},
-  d:{es:'El colágeno de la línea Celion para tu rutina de belleza y bienestar. Mira el video y pregúntale a Sonia.',en:'Celion line collagen for your beauty and wellness routine. Watch the video and ask Sonia.'}}
+  d:{es:'El colágeno de la línea Celion para tu rutina de belleza y bienestar. Mira el video y pregúntanos.',en:'Celion line collagen for your beauty and wellness routine. Watch the video and ask us.'}}
 ];
 const V=[
  {s:'media/kit-dna',c:{es:'Así llega tu kit Celion',en:'How your Celion kit arrives'}},
@@ -303,21 +319,26 @@ const V=[
 ];
 const T={
  es:{},
- en:{h_hand:'Take care of your health, improve your life',h_t1:'Your wellbeing,',h_t2:'our mission.',h_p:"I'm Sonia Narváez, an independent Celion distributor. I'll advise you and deliver your nutrition, beauty and wellness products.",h_c1:'See products',h_c2:'Message me',hoy_k:'Today',add:'Add to order',p_k:'Our full line',p_t:'Nutrition, beauty and wellness in one place',p_p:'Build your order with the buttons and send it to Sonia on WhatsApp. She will confirm price, availability and delivery.',s_t:'Your body at its best',s_p:'A 12-day protocol combining four products and daily habits.',s1:'metabolism support',s2:'appetite control',s3:'complete dinner and lunch',s4:'energy for the day',s_c:'I want SOS12',s_n:'Results vary for each person, depending on diet and physical activity.',v_k:'Videos',v_t:'See the products in action',v_p:'Tap a video to watch it with sound.',hb_k:'Habits that add up',hb_t:'Take care of your health from the inside out',hb1:'Keep a healthy, balanced diet.',hb2:'Support your routine with good hydration.',hb3:'Keep healthy habits and stay consistent every day.',hb4:'Care for your health from the inside out.',t_k:'Want to join our team?',t_t:'Join the Celion family',t_p:'Earn income, share wellbeing and reach your goals. Be part of a project of wellness, health and growth.',t_c:'Tell me more',c_k:'Contact me!',c_p:'Independent Celion distributor. Caucasia, Antioquia. Free advice, no commitment.',c_call:'Call',disc:'Celion products are dietary supplements, not medicines, and do not replace a balanced diet or medical treatment. If you have a medical condition, are pregnant, breastfeeding or take medication, ask your doctor before using them. Sonia Narváez is an independent distributor; Celion is a registered trademark of its owner.',f_by:'App made by',f_lic:'License valid until',cart:'Your order',cart_u:'products',send:'Send to Sonia',lic_t:'License expired',lic_p:'To keep using this app, renew the license with Vibras Positivas HM.'}
+ en:{h_hand:'Take care of your health, improve your life',h_t1:'Your wellbeing,',h_t2:'our mission.',h_p:"I'm Sonia Narváez, an independent Celion distributor. I'll advise you and deliver your nutrition, beauty and wellness products.",h_c1:'See products',h_c2:'Message us',hoy_k:'Today',add:'Add to order',p_k:'Our full line',p_t:'Nutrition, beauty and wellness in one place',p_p:'Build your order with the buttons and send it on WhatsApp to Sonia or her daughter Tatiana. They will confirm price, availability and delivery.',s_t:'Your body at its best',s_p:'A 12-day protocol combining four products and daily habits.',s1:'metabolism support',s2:'appetite control',s3:'complete dinner and lunch',s4:'energy for the day',s_c:'I want SOS12',s_n:'Results vary for each person, depending on diet and physical activity.',v_k:'Videos',v_t:'See the products in action',v_p:'Tap a video to watch it with sound.',hb_k:'Habits that add up',hb_t:'Take care of your health from the inside out',hb1:'Keep a healthy, balanced diet.',hb2:'Support your routine with good hydration.',hb3:'Keep healthy habits and stay consistent every day.',hb4:'Care for your health from the inside out.',t_k:'Want to join our team?',t_t:'Join the Celion family',t_p:'Earn income, share wellbeing and reach your goals. Be part of a project of wellness, health and growth.',t_c:'Tell me more',c_k:'Contact us!',c_t:'Sonia and Tatiana',c_p:'Independent Celion distributors. Caucasia, Antioquia. Free advice, no commitment; message whichever you prefer.',disc:'Celion products are dietary supplements, not medicines, and do not replace a balanced diet or medical treatment. If you have a medical condition, are pregnant, breastfeeding or take medication, ask your doctor before using them. Sonia Narváez and Tatiana Vega are independent distributors; Celion is a registered trademark of its owner.',f_by:'App made by',f_lic:'License valid until',cart:'Your order',cart_u:'products',lic_t:'License expired',lic_p:'To keep using this app, renew the license with Vibras Positivas HM.'}
 };
 let L=localStorage.getItem('sn_lang')||'es';
 const cart={};
 const $=s=>document.querySelector(s);
 const ES={};document.querySelectorAll('[data-i]').forEach(e=>ES[e.dataset.i]=e.textContent);
 function bogota(){return new Date(new Date().toLocaleString('en-US',{timeZone:'America/Bogota'}))}
-function wa(t){return 'https://wa.me/'+WA+'?text='+encodeURIComponent(t)}
+function wa(t,k){return 'https://wa.me/'+SELL[k||SV].wa+'?text='+encodeURIComponent(t)}
 function apply(){
  document.documentElement.lang=L;
  document.querySelectorAll('[data-i]').forEach(e=>{const k=e.dataset.i;e.textContent=L==='es'?ES[k]:(T.en[k]||ES[k])});
  document.querySelectorAll('[data-l]').forEach(b=>b.classList.toggle('f',b.dataset.l===L));
- const hi=L==='es'?'Hola Sonia, vi tu app de Celion y quiero información.':'Hi Sonia, I saw your Celion app and I would like information.';
- ['#waHero','#waC','#fab'].forEach(s=>$(s).href=wa(hi));
- $('#waTeam').href=wa(L==='es'?'Hola Sonia, quiero saber cómo hacer parte del equipo Celion.':'Hi Sonia, I want to know how to join the Celion team.');
+ const hiF=k=>L==='es'?'Hola '+SELL[k].f+', vi la app de Celion y quiero información.':'Hi '+SELL[k].f+', I saw the Celion app and I would like information.';
+ ['#waHero','#fab'].forEach(s=>$(s).href=wa(hiF(SV)));
+ $('#fab').textContent='WhatsApp · '+SELL[SV].f;
+ $('#waTeam').href=wa(L==='es'?'Hola '+SELL[SV].f+', quiero saber cómo hacer parte del equipo Celion.':'Hi '+SELL[SV].f+', I want to know how to join the Celion team.');
+ $('#duo').innerHTML=Object.keys(SELL).map(k=>{const v=SELL[k];return `<div><h3>${v.n}</h3><small>${v.r[L]}</small><div class="big">${v.tel}</div><a class="cta" target="_blank" rel="noopener" href="${wa(hiF(k),k)}">WhatsApp</a> <a class="cta alt" style="border:2px solid var(--o)" href="tel:+${v.wa}">${L==='es'?'Llamar':'Call'}</a></div>`}).join('');
+ $('#selCart').dataset.t=L==='es'?'Pedir con:':'Order with:';
+ $('#selCart').innerHTML=Object.keys(SELL).map(k=>`<button class="${k===SV?'on':''}" onclick="setV('${k}')">${SELL[k].f}</button>`).join('');
+ $('#send').textContent=(L==='es'?'Enviar a ':'Send to ')+SELL[SV].f;
  grid();vids();hoy();tick();drawCart();
  $('#licTxt').textContent=new Date(LIC_END+'T12:00:00-05:00').toLocaleDateString(L==='es'?'es-CO':'en-US',{day:'numeric',month:'long',year:'numeric',timeZone:'America/Bogota'});
 }
@@ -354,7 +375,7 @@ function drawCart(){
 }
 $('#send').onclick=()=>{
  const ls=Object.keys(cart).map(id=>'- '+cart[id]+' x '+P.find(x=>x.id===id).name).join('\n');
- const t=(L==='es'?'Hola Sonia, quiero hacer este pedido de Celion:\n':'Hi Sonia, I would like to order these Celion products:\n')+ls+(L==='es'?'\n\n¿Me confirmas precio y entrega? Gracias.':'\n\nCould you confirm price and delivery? Thank you.');
+ const t=(L==='es'?'Hola '+SELL[SV].f+', quiero hacer este pedido de Celion:\n':'Hi '+SELL[SV].f+', I would like to order these Celion products:\n')+ls+(L==='es'?'\n\n¿Me confirmas precio y entrega? Gracias.':'\n\nCould you confirm price and delivery? Thank you.');
  window.open(wa(t),'_blank');
 };
 const lb=$('#lb');let zl=[],zi=0;
